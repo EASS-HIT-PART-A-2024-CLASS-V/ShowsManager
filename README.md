@@ -24,7 +24,7 @@ Whether you're switching between streaming services or sticking with traditional
 
 ## Installation
 
-Clone the project using:
+Clone the project repository using:
 ```
 git clone https://github.com/EASS-HIT-PART-A-2024-CLASS-V/ShowsManager.git
 ```
