@@ -69,8 +69,8 @@ ShowsManager/
 ## Running Tests
 Assuming you are in the root directory of the project, run the next code on terminal:
 ```
-pytest ./backend/tests/test_unit.py
-pytest ./backend/tests/integration_test.py
+pytest ./backend/test_unit.py
+pytest ./backend/integration_test.py
 ```
 
 
