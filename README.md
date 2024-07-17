@@ -76,7 +76,7 @@ pytest ./backend/integration_test.py
 
 ## Video Demo
 
-Watch a demonstration of Shows Manager in action on [YouTube](https://youtu.be/VTdqYYW5VYw).
+Watch a demonstration of Shows Manager in action on https://youtu.be/VTdqYYW5VYw
 
 ![Video Thumbnail](https://img.youtube.com/vi/VTdqYYW5VYw/hqdefault.jpg)
 
