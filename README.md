@@ -57,7 +57,6 @@ ShowsManager/
 │   ├── sec/
 │   ├── .gitignore
 │   ├── Dockerfile
-│   ├── requirements.txt
 │   ├── package-lock.json
 │   └── package.json
 ├── .gitignore
