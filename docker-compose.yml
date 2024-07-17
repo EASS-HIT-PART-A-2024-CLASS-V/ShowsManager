@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile  
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile  
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://backend:8000  # Environment variable to set API URL
+    networks:
+      - app-network
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_DATABASE: test  # Specify the database name
+      MONGO_INITDB_ROOT_USERNAME: admin  # MongoDB root username
+      MONGO_INITDB_ROOT_PASSWORD: admin  # MongoDB root password
+    volumes:
+      - mongo_data:/data/db
+      - ./backend/mongo-in.js:/docker-entrypoint-initdb.d/mongo-in.js
+      - ./mongod.conf:/mongod.conf
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    command: mongod --config /mongod.conf
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+
