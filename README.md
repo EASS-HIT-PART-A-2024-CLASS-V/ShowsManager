@@ -65,6 +65,8 @@ ShowsManager/
 └── README.md
 ```
 
+![Diagram](Diagram.png)
+
 
 ## Running Tests
 Assuming you are in the root directory of the project, run the next code on terminal:
